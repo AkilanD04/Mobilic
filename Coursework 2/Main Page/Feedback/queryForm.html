@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query Form</title>
+    <link rel="stylesheet" href="queryForm.css">
+    <link rel="shortcut icon" type="image/jpg" href="../images/favicon.jpg">
+</head>
+
+<body>
+    <div class="logo">
+        <a href="../Homepage.html" target="_self"><img src="../images/logo.jpeg" alt="logo" width="200" height="70" /></a>
+    </div>
+    <div class="navbar">
+        <a href="../Homepage.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Products
+            </button>
+            <div class="dropdown-content">
+                <a href="../Product/android.html">Android</a>
+                <a href="../Product/apple.html">Apple</a>
+
+            </div>
+        </div>
+        <a href="../About/details.html">About</a>
+        <a href="../Contents/Thumbnail.html">Brands</a>
+        <a href="#feedback">Feedback</a>
+        <div class="dropdown">
+            <button class="dropbtn">Other
+            </button>
+            <div class="dropdown-content">
+                <a href="../Quiz/Quiz.html">Quiz</a>
+                <a href="../SItemap/sitemap.html">Sitemap</a>
+                <a href="../extracontenet/iPhone12.html">Extra Content</a>
+            </div>
+        </div>
+    </div>
+
+    <form id="results" method="post" action="mailto:dulmi.20211494@iit.ac.lk" enctype="text/plain">
+    <div class="" id="formSubmitOne">
+        <h2 id="fnameSub"></h2>
+        <h2 id="lnameSub"></h2>
+        <h2 id="emailSub"></h2>
+        <h2 id="numberSub"></h2>
+        <h2 id="detailsSub"></h2>
+        <h2 id="radioSub"></h2>
+        <button id="subBtn" onclick="emailsend()" >Submit</button>
+    </div>
+    
+    </form>
+    <div>
+        <button id="editBtn" onclick="editForm()" >Edit</button>
+    </div>
+    
+
+    <form id="demo" name="demo" class="form" action="https://formspree.io/f/myyorwvo" method="post">
+        <div class="query">
+            <hr>
+
+            <h1 style="display: inline;"> Query Form </h1>
+            <br></br>
+            <div>
+                <h3>Personal Details </h3>
+                <label for="fName">First Name :</label>
+                <input type="text" name="fName" id="fName" placeholder="Enter your first name">
+                <br></br>
+            </div>
+            <div>
+                <label for="lName">Last Name :</label>
+                <input type="text" name="lName" id="lName" placeholder="Enter your last name">
+                <br></br>
+            </div>
+            <div>
+                <label for="email">Email Address :</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address">
+                <br></br>
+            </div>
+            <div>
+                <label for="number">Contact Number :</label>
+                <input type="number" max="10" name="number" id="number" placeholder="Enter your contact number">
+                <br></br>
+            </div>
+            <div>
+                <h3>Query Subjects </h3>
+                <p><input type="radio" id="delivery" name="subjects" value="Delivery" checked>Delivery</p>
+                <p><input type="radio" id="details" name="subjects" value="Product details">Product Details</p>
+                <p><input type="radio" id="other" name="subjects" value="Other">Other</p>
+            </div>
+            <div>
+                <h3>Query Details </h3>
+                <label for="queryDetails">Details :</label>
+                <textarea name="query" id="queryDetails" rows="5" cols="20">
+                    </textarea>
+                <p id="result"></p>
+            </div>
+        </div>
+        <br></br>
+        <button class="queryButton" type="button" onclick="myFunction()" action="Result.html">View Query</button>
+    </form>
+
+    <script src="queryForm.js"></script>
+</body>
+
+</html>
